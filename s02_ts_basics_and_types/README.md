@@ -94,7 +94,7 @@ const person1 = {
 };
 
 /**
- * // TS type called 'Object Type" or "Type Object"
+ * // TS type called 'Object Type" or "Type Object". Note the ; after each property and not , as it should be on an object
  * const person1: {
  *  name: string;
  *  age: number;
@@ -106,7 +106,7 @@ console.log(person1);
 console.log(person1.name);
 console.log(person1.surname); // Property 'surname' does not exist on type '{ name: string; age: number; }'.
 
-const person2: object = {
+const person2: object = { //we have specify as object, but you can't access any property as TS expect the structure of object to be specified as the time of type assignment. Hence we don't specify object and let TS make inference.
   name: 'Max',
   age: 30,
 };
