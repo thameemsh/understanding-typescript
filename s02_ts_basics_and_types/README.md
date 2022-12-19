@@ -94,7 +94,7 @@ const person1 = {
 };
 
 /**
- * // TS type
+ * // TS type called 'Object Type" or "Type Object"
  * const person1: {
  *  name: string;
  *  age: number;
