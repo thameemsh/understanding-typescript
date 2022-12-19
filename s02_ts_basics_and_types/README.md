@@ -106,29 +106,18 @@ console.log(person1);
 console.log(person1.name);
 console.log(person1.surname); // Property 'surname' does not exist on type '{ name: string; age: number; }'.
 
-const person2: object = { //we have specify as object, but you can't access any property as TS expect the structure of object to be specified as the time of type assignment. Hence we don't specify object and let TS make inference.
+const person2: object = { //we can specify type as object, but you can't access any property as TS expect the structure of object to be specified as the time of type assignment. Hence we don't specify object and let TS make inference.
   name: 'Max',
   age: 30,
 };
 
-const person3: {} = {
-  name: 'Max',
-  age: 30,
-};
-
-/**
- * // TS type
- * const person2: object
- * const person3: object
- *
- */
 
 console.log(person2);
 console.log(person2.name); // Property 'name' does not exist on type 'object'.
 
 // GOOD but BETTER to let TS infers the values
 
-const person4: {
+const person3: {
   name: string;
   age: number;
 } = {
@@ -136,7 +125,7 @@ const person4: {
   age: 30,
 };
 
-console.log(person4);
+console.log(person3);
 ```
 
 Let's say you have this JavaScript object:
