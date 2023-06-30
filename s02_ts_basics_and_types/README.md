@@ -609,6 +609,9 @@ function generateError(message: string, code: number): never {
   throw { message, errorCode: code };
 }
 
+//Another function that would never return any type
+while (true) {} // Infinte loop
+
 generateError('An error occured', 500);
 ```
 
