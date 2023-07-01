@@ -242,9 +242,9 @@ It is a good practice to put keep them at `true` (default value).
 {
   "compilerOptions": {
     //...
-    "noUnusedLocals": true /* Report errors on unused locals. */,
+    "noUnusedLocals": true /* Report errors on unused local variables, but usused global variables are allowed. */,
     "noUnusedParameters": true /* Report errors on unused parameters. */,
-    "noImplicitReturns": true /* Report error when not all code paths in function return a value. */,
+    "noImplicitReturns": true /* Report error when not all code paths in function return a value. For ex. if we have an if statement inside a function but don't have return if the if statement is not met */,
     "noFallthroughCasesInSwitch": true /* Report errors for fallthrough cases in switch statement. */
     //...
   }
