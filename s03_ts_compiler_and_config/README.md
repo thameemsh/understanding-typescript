@@ -219,7 +219,14 @@ A good prcatice is to set up a `src` folder with all the TS files (and folders) 
 {
   "compilerOptions": {
     //...
-    "strict": true /* Enable all strict type-checking options. */
+    "strict": true /* Enable all strict type-checking options. Sets all the (below) options to true */
+    "noImplicitAny":true /*Does not allow any type for paramater, but any could be set for variables, this is because functions are declared before they are called and TS could not infer the data type of the parameters*/
+    "strictNullChecks":true /*Mkaing this option false which remove the restriction to be able to workwith potentially null value. We could overcome this by adding '!' at the end of the variable or adding if check*/
+    "stricBindHandler":true /*Making this option false would mean that the TS will ignore the parameter set inside a bind(), in the below example, the preconfigured parameter needs to be string, but we are setting as null should would show an error if the option was true
+function clickHandler(message: string) {}
+button.addEventListener("click", clickHandler.bind(null));
+     */
+    "AlwaysStrict":true /*Makes sure the JS always uses Use Strict mode (variable cannot be assigned without it being declared earlier*/ 
     //...
   }
 }
