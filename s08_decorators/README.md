@@ -126,7 +126,7 @@ console.log(pers);
 As we saw, we can apply decorator to a `class`. But also to a **property** (a field).
 
 ```ts
-function Log(target: any, propertyName: string | Symbol) {
+function Log(target: any, propertyName: string | Symbol) { //In case of Instance property, target will return the prototype of that object and in case of Static property, it will refer to the constructor property state
   console.log('Property decorator!');
   console.log(target, propertyName);
 }
